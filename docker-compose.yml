@@ -1,0 +1,9 @@
+services:
+    openjdk:
+        container_name: openjdk
+        image: openjdk:latest
+        ports:
+            - 8080:8080
+        volumes:
+            - ./target:/target
+        command: bash -c "java -jar /target/hello-world-0.1.0.jar"
